@@ -1,4 +1,7 @@
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.collectors.kubernetes_metrics_collector import collect_kubernetes_metrics
 from src.collectors.linux_metrics_collector import collect_linux_metrics

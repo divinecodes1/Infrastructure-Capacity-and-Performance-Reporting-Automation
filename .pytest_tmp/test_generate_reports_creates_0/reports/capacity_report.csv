@@ -1,0 +1,2 @@
+service,cpu_usage,memory_usage,disk_usage,pod_restarts,risk_level
+trading-api-demo,72,68,81,2,Medium

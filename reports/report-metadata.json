@@ -1,0 +1,40 @@
+{
+  "linux": {
+    "timestamp": "2026-07-22T16:36:03.217516",
+    "hostname": "DESKTOP-4O9V6E0",
+    "cpu_percent": 72,
+    "memory_percent": 68,
+    "disk_percent": 81,
+    "uptime_seconds": 125000,
+    "service_status": "healthy"
+  },
+  "kubernetes": {
+    "pods": [
+      {
+        "name": "trading-api-demo",
+        "status": "Running",
+        "restarts": 2
+      },
+      {
+        "name": "clearing-service-demo",
+        "status": "Running",
+        "restarts": 1
+      }
+    ],
+    "node_capacity": {
+      "cpu": 80,
+      "memory": 70,
+      "disk": 60
+    },
+    "failed_jobs": 0,
+    "deployment_ready": true
+  },
+  "service": {
+    "service": "clearing-service-demo",
+    "availability_percent": 99.4,
+    "response_time_ms": 210,
+    "failed_health_checks": 3,
+    "pod_restarts": 1,
+    "status": "healthy"
+  }
+}

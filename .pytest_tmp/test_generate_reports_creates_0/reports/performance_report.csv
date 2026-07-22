@@ -1,0 +1,2 @@
+service,availability,response_time_ms,failed_health_checks,status
+clearing-service-demo,99.4,210,3,healthy

@@ -1,0 +1,2 @@
+service,availability_percent,response_time_ms,status
+clearing-service-demo,99.4,210,healthy
