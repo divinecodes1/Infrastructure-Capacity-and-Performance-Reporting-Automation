@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: reporting-config
+  namespace: infrastructure-reporting
+data:
+  REPORT_ENV: demo

@@ -1,0 +1,7 @@
+services:
+  capacity-reporter:
+    build: .
+    container_name: capacity-reporter
+    command: python src/main.py
+    volumes:
+      - ./reports:/app/reports

@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: reporting-cronjob
+  namespace: infrastructure-reporting
+spec:
+  schedule: "0 8 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: reporter
+              image: python:3.11-slim
+              command: ["python", "src/main.py"]
+              envFrom:
+                - configMapRef:
+                    name: reporting-config
+              resources:
+                requests:
+                  cpu: "100m"
+                  memory: "128Mi"
+                limits:
+                  cpu: "500m"
+                  memory: "512Mi"

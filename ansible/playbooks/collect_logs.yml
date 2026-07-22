@@ -1,0 +1,9 @@
+---
+- name: Collect logs
+  hosts: demo
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Placeholder log collection
+      debug:
+        msg: "Log collection placeholder"

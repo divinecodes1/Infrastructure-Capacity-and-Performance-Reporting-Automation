@@ -1,0 +1,9 @@
+---
+- name: Generate report
+  hosts: demo
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Placeholder report generation
+      debug:
+        msg: "Report generation placeholder"

@@ -1,0 +1,9 @@
+---
+- name: Check service health
+  hosts: demo
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Report service health placeholder
+      debug:
+        msg: "Service health check placeholder"

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reporting-deployment
+  namespace: infrastructure-reporting
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reporting
+  template:
+    metadata:
+      labels:
+        app: reporting
+    spec:
+      containers:
+        - name: reporting
+          image: python:3.11-slim
+          command: ["python", "src/main.py"]
+          envFrom:
+            - configMapRef:
+                name: reporting-config
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
